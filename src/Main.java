@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(myDogs());
+        System.out.println("questi sono i miei cani: " + myDogs());
 
         String dog = "Akita";
         HashSet<String> dogHouse = myDogs();
         dogHouse.add(dog);
 
-        System.out.println(dogHouse);
+        System.out.println("questa è la mia nuova dog house: " + dogHouse);
 
 
 //        for (String element : dogHouse) {
@@ -20,16 +20,16 @@ public class Main {
         Iterator<String> iterator = dogHouse.iterator();
         while (iterator.hasNext()) {
             String element = iterator.next();
-            System.out.println("ecco il cane di razza: " + element);
+            System.out.println("ecco il mio cane di razza: " + element);
             if (Objects.equals(element, "Akita")) {
                 iterator.remove();
             }
         }
 
-        System.out.println(dogHouse);
+        System.out.println("questa è la mia vecchia dog house: " + dogHouse);
 
         dogHouse.clear();
-        System.out.println(dogHouse);
+        System.out.println("i cani sono usciti a giocare? " + dogHouse.isEmpty());
 
     }
 
